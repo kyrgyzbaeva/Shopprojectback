@@ -1,10 +1,12 @@
 package com.shopApp.DTO.mapper;
 
 import com.shopApp.entity.User;
-import com.shopAppp.DTO.response.UserDTO;
+import com.shopApp.DTO.response.UserDTO;
+import org.mapstruct.Mapper;
 import org.springframework.stereotype.Component;
 
 @Component
+@Mapper
 public class UserMapper {
 
     public UserDTO toDTO(User user) {

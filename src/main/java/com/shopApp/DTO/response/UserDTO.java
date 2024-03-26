@@ -1,4 +1,4 @@
-package com.shopAppp.DTO.response;
+package com.shopApp.DTO.response;
 
 public class UserDTO {
 
