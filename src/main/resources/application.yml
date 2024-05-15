@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: ${JDBC_URL:jdbc:h2:file:./database/bag-shop}
+    driver-class-name: ${DRIVER_CLASS_NAME:org.h2.Driver}
+    username: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:password}
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: ${HBM_DDL_AUTO:update}
+    properties:
+      hibernate:
+        dialect: ${HBM_DIALECT:org.hibernate.dialect.H2Dialect}
+  h2:
+    console:
+      enabled: true
+
+  mail:
+    host: smtp.gmail.com
+    username: taskmanagerinternlabs@gmail.com
+    password: rbuc bbio vppu ezij
+    port: 587
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          ssl:
+            trust: smtp.gmail.com
+
+security-config:
+  app:
+    jwtSecret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+    jwtExpirationMs: 3600000
+    jwtRefreshExpirationMs: 86400000
